@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block title -%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+        a {
+            text-decoration-line: none;
+            color: rgb(85, 255, 0);
+        }
+        #top_bar {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 3px 5px 5px #aeaeae;
+        }
+        #title_tag {
+            position: sticky;
+            left: 50%;
+            font-size: xx-large;
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+        }
+        #log_in {
+            position: sticky;
+            left: 92%;
+            font-size: xx-large;
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+    {% endblock -%}
+</head>
+<body>
+    {% block content %}
+    <div id="top_bar">
+        <a href="/" id="title_tag">Cum.net</a>
+        <a href="/log_in_user_type" id="log_in">{{log_in}}</a>
+    </div>
+    {% endblock %}
+</body>
+</html>

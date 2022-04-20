@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{{ super() }}
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+    td {
+        border-radius: 5px;
+        box-shadow: 3px 5px 5px #aeaeae;
+        background-color: rgb(0, 170, 255);
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+        
+    }
+    table {
+        border-radius: 10px;
+        box-shadow: 3px 5px 5px #aeaeae;
+    }
+    th {
+        background-color: rgb(0, 0, 0);
+        border-radius: 5px;
+        box-shadow: 3px 5px 5px #aeaeae;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+    }
+</style>
+<br>
+<table border="0">
+    <tr id="title_of_table">
+        <th>№</th>
+        <th>Поставщик</th>
+        <th>Должник, предмет торгов</th>
+        <th>Состояние</th>
+        <th>Начало приема заявок</th>
+    </tr>
+    {% for i in counter %}
+        <tr><td>{{number[i]}}</td><td>{{organizer[i]}}</td><td><a href="">{{subject_of_auction[i]}}</a></td><td>{{status[i]}}</td><td>{{app_accept_time[i]}}</td></tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

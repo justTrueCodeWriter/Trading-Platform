@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+        #sign_up_purchaser_design {
+            border-radius: 10px;
+            box-shadow: 3px 5px 5px #aeaeae;
+            position: absolute;
+            left: 40%;
+            top: 20%;
+            width: 400px;
+            height: 590px;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            font-size: xx-large;
+        }
+        h1 {
+            font-size: x-large;
+        }
+        input {
+            border-radius: 10px;
+            font-size: x-large;
+        }
+        button {
+            border-radius: 10px;
+            font-size: x-large;
+            background-color: rgb(0, 170, 255);
+            color: white;
+        }
+        a {
+            text-decoration-line: none;
+            border-radius: 10px;
+            font-size: x-large;
+            background-color: rgb(0, 170, 255);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="sign_up_purchaser_design">
+        <h1>Регистрация<br>покупателя</h1>
+        <form action="/sign_up_purchaser" method="post">
+            <input type="text" name="full_name" id="full_name" placeholder="ФИО">
+            <input type="text" name="postal_address" id="postal_address" placeholder="Почтовый адрес">
+            <input type="text" name="legal_address" id="legal_address" placeholder="Юридический адрес">
+            <input type="tel" name="phone_number" id="phone_number" placeholder="Телефон">
+            <input type="email" name="e_mail" id="e_mail" placeholder="Адрес эл. почты">
+            <input type="text" name="inn" id="inn" placeholder="ИНН">
+            <input type="text" name="OGRNIP_code" id="OGRNIP_code" placeholder="ОГРН-код">
+            <input type="text" name="login" id="login" placeholder="Логин">
+            <input type="password" name="password" id="password" placeholder="Пароль">           
+            <button>Подтвердить</button>
+        </form>
+        <a href="/" id="returner">На главную</a>
+    </div>

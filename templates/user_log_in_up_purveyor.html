@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+        a {
+            text-decoration-line: none;
+            color: rgb(255, 255, 255);
+            border-radius: 3px;
+            box-shadow: 3px 5px 5px #aeaeae;
+            background-color: rgb(0, 170, 255);
+            position: absolute;
+            left: 15%;
+            top: 50%;
+            width: 70%;
+            height: 50px;
+            text-align: center;
+            font-size: x-large;
+
+        }
+        #log_form {
+            border-radius: 10px;
+            box-shadow: 3px 5px 5px #aeaeae;
+            position: absolute;
+            left: 40%;
+            top: 20%;
+            width: 400px;
+            height: 400px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1 {
+            position: absolute;
+            left: 25%;
+            top: 5%;
+            font-size: xx-large;
+        }
+        #login {
+            border-radius: 3px;
+            box-shadow: 3px 5px 5px #aeaeae;
+            position: absolute;
+            left: 15%;
+            top: 40%;
+            width: 100px;
+            text-align: center;
+            font-size: x-large;
+
+        }
+        #register {
+            border-radius: 3px;
+            box-shadow: 3px 5px 5px #aeaeae;
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div id="log_form">
+        <input id="log_type" required hidden>
+        <h1>Регистрация</h1>
+        <button onclick="log_in()" id="login">Вход</button>
+        <button onclick="sign_up()" id="register">Регистрация</button>
+        <a href="" id="log_type_commit">Подтвердить</a>
+    </div>
+    <script>
+        function log_in() {
+            document.getElementById('log_type').value='log_in';
+            var log_type = document.getElementById('log_type').value;
+            if (log_type == 'log_in') {
+                document.getElementById('log_type_commit').href = '/log_in_purveyor';
+            }
+            else if (log_type == 'sign_up') {
+                document.getElementById('log_type_commit').href = '/sign_up_purveyor';
+            }
+        }
+        function sign_up() {
+            document.getElementById('log_type').value='sign_up';
+            var log_type = document.getElementById('log_type').value;
+            if (log_type == 'log_in') {
+                document.getElementById('log_type_commit').href = '/log_in_purveyor';
+            }
+            else if (log_type == 'sign_up') {
+                document.getElementById('log_type_commit').href = '/sign_up_purveyor';
+            }
+        }
+    </script>
+</body>
+</html>

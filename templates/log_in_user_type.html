@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+        a {
+            text-decoration-line: none;
+            color: rgb(255, 255, 255);
+            border-radius: 3px;
+            box-shadow: 3px 5px 5px #aeaeae;
+            background-color: rgb(0, 170, 255);
+            position: absolute;
+            left: 15%;
+            top: 50%;
+            width: 70%;
+            height: 40px;
+            text-align: center;
+            font-size: x-large;
+
+        }
+        #type_form {
+            border-radius: 10px;
+            box-shadow: 3px 5px 5px #aeaeae;
+            position: absolute;
+            left: 40%;
+            top: 20%;
+            width: 400px;
+            height: 400px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1 {
+            position: absolute;
+            left: 25%;
+            top: 5%;
+            font-size: xx-large;
+        }
+        #purchase {
+            border-radius: 3px;
+            box-shadow: 3px 5px 5px #aeaeae;
+            position: absolute;
+            left: 15%;
+            top: 40%;
+            font-size: x-large;
+
+        }
+        #purvey {
+            border-radius: 3px;
+            box-shadow: 3px 5px 5px #aeaeae;
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div id="type_form">
+        <input id="user_type" required hidden>
+        <h1>Регистрация</h1>
+        <button onclick="purchaser()" id="purchase">Покупатель</button>
+        <button onclick="purveyor()" id="purvey">Поставщик</button><br>
+        <a href="" id="user_type_commit">Подтвердить</a>
+    </div>
+    <script>
+        function purchaser() {
+            document.getElementById('user_type').value='purchaser';
+            var user_type = document.getElementById('user_type').value;
+            if (user_type == 'purchaser') {
+                document.getElementById('user_type_commit').href = '/user_log_in_up_purchaser';
+            }
+            else if (user_type == 'purveyor') {
+                document.getElementById('user_type_commit').href = '/user_log_in_up_purveyor';
+            }
+        }
+        function purveyor() {
+            document.getElementById('user_type').value='purveyor';
+            var user_type = document.getElementById('user_type').value;
+            if (user_type == 'purchaser') {
+                document.getElementById('user_type_commit').href = '/user_log_in_up_purchaser';
+            }
+            else if (user_type == 'purveyor') {
+                document.getElementById('user_type_commit').href = '/user_log_in_up_purveyor';
+            }
+        }
+        
+    </script>
+</body>
+</html>
