@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 
 app.config['SECRET_KEY'] = 'secretkey,dontrytostealhehe'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 connect = sqlite3.connect('platform.db', check_same_thread=False)
 
